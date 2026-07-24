@@ -244,7 +244,7 @@ const title = "Klear Kollective | Content Creation & Production";
             alt="Gardens by the Bay Singapore" 
             class="absolute inset-0 w-full h-full object-cover" 
           />
-        <h2 class="relative z-10 p-6 md:p-8 text-5xl md:text-6xl font-black italic text-black tracking-tight drop-shadow-sm">
+        <h2 class="relative z-10 p-6 md:p-8 text-5xl md:text-6xl font-black italic text-black tracking-tight">
           Contact Us
         </h2>
       </div>
@@ -258,7 +258,7 @@ const title = "Klear Kollective | Content Creation & Production";
             <label class="text-xl md:text-2xl font-normal text-black md:col-span-3">Name</label>
             <input 
               type="text" 
-              placeholder="your name here" 
+              placeholder="Your name goes here" 
               class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
             />
           </div>
@@ -276,11 +276,30 @@ const title = "Klear Kollective | Content Creation & Production";
           <!-- Package Selection -->
           <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-4">
             <label class="text-xl md:text-2xl font-normal text-black md:col-span-3">Package</label>
-            <select class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-lg text-black focus:outline-none focus:ring-2 focus:ring-[#1a0089] cursor-pointer appearance-none">
-              <option>🎥 Klear Create</option>
-              <option>🎉 Klear Capture</option>
-              <option>🤝 Klear Partner</option>
-            </select>
+            
+            <!-- Wrapper to hold the select input & custom arrow -->
+            <div class="relative md:col-span-9 w-full">
+              <select 
+                required
+                defaultValue=""
+                class="w-full px-6 py-3 pr-12 rounded-full border border-[#404040] bg-transparent text-lg text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#1a0089] cursor-pointer appearance-none invalid:text-[#404040]/60"
+              >
+                <!-- Placeholder option (disabled so they have to pick a real package) -->
+                <option value="" disabled selected hidden class="text-[#404040]/60">
+                  Select a package 
+                </option>
+                <option value="klear-create" class="text-[#404040]">🎥 Klear Create</option>
+                <option value="klear-capture" class="text-[#404040]">🎉 Klear Capture</option>
+                <option value="klear-partner" class="text-[#404040]">🤝 Klear Partner</option>
+              </select>
+
+              <!-- Custom Dropdown Arrow Icon -->
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-[#404040]">
+                <svg class="h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                </svg>
+              </div>
+            </div>
           </div>
 
           <!-- Message Box -->
@@ -298,7 +317,7 @@ const title = "Klear Kollective | Content Creation & Production";
         <div class="flex items-center justify-end gap-4 text-xl font-normal text-black mt-4">
           <span>...or you can just</span>
           <a 
-            href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I%27d%20like%20to%20engage%20your%20service%2C%20but%20first%0AMy%20business%20is%3A%20%0AI%20need%20you%20for...%0A" 
+            href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I'd%20like%20to%20engage%20your%20service,%20but%20first%0AMy%20business%20is...%20%0AI%20need%20you%20for%20_(insert%20package,%20or%20describe%20how%20I%20can%20help%20you)_" 
             target="_blank"
             class="bg-[#b7cf4f] hover:bg-[#a2ba3c] text-black px-6 py-3 rounded-full font-medium transition-all shadow-sm"
           >
@@ -343,7 +362,8 @@ const title = "Klear Kollective | Content Creation & Production";
         <h4 class="text-[24px] font-bold italic tracking-wide text-white">GET IN TOUCH</h4>
         <ul class="flex flex-col gap-2.5">
           <li>
-            <a href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I%27d%20like%20to%20engage%20your%20service%2C%20but%20first%0AMy%20business%20is%3A%20%0AI%20need%20you%20for...%0A" class="text-[24px] hover:underline flex items-center gap-2 text-[#efe7d3]/90 transition-all">
+            <a href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I'd%20like%20to%20engage%20your%20service,%20but%20first%0AMy%20business%20is...%20%0AI%20need%20you%20for%20_(insert%20package,%20or%20describe%20how%20I%20can%20help%20you)_" 
+            class="text-[24px] hover:underline flex items-center gap-2 text-[#efe7d3]/90 transition-all">
               💬 WhatsApp
             </a>
           </li>
