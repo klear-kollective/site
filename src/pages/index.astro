@@ -14,277 +14,343 @@ const title = "Klear Kollective | Content Creation & Production";
   </head>
   <body class="bg-[#efe7d3] text-[#EFE7D3] font-['Helvetica',sans-serif] antialiased">
 
-    <!-- HERO SECTION (Text positioned on the right 2/3 of the image) -->
-    <section class="relative w-full min-h-[550px] md:min-h-[850px] flex items-center overflow-hidden">
+<!-- HERO SECTION -->
+<section class="relative w-full min-h-[500px] md:min-h-[850px] flex items-end md:items-center overflow-visible md:overflow-hidden pb-0">
+  
+  <!-- Background Image -->
+  <img 
+    src="/hero.png" 
+    alt="Creator Filming On Location" 
+    class="absolute inset-0 w-full h-full object-cover object-left md:object-center z-0"
+  />
+
+  <!-- Main Container -->
+  <!-- Switched to justify-start on mobile so card attaches to the left edge -->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-0 md:px-12 flex justify-start md:grid md:grid-cols-3">
+    
+    <!-- Left 1/3 Spacer (Desktop only) -->
+    <div class="hidden md:block col-span-1"></div>
+
+    <!-- Blue Content Card -->
+    <!-- Flush left on mobile (w-[82%]), sits flush to bottom -->
+    <div class="w-[82%] sm:w-[75%] md:w-full md:col-span-2 text-[#efe7d3] flex flex-col justify-center items-start bg-[#1a0089] md:bg-transparent p-5 pb-8 md:p-0 md:pl-[100px] relative shadow-xl md:shadow-none mb-0">
       
-      <!-- Background Image (PNG) -->
-      <img 
-        src="/hero.png" 
-        alt="Creator Filming On Location" 
-        class="absolute inset-0 w-full h-full object-cover z-0"
-      />
-
-      <!-- Grid Overlay Layout -->
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3">
-        
-        <!-- Left 1/3 Spacer (Keeps the person filming visible) -->
-        <div class="hidden md:block col-span-1"></div>
-
-        <!-- Right 2/3 Content Container -->
-        <div class="col-span-1 md:col-span-2 text-[#efe7d3] flex flex-col justify-center items-start gap-4 md:gap-5 pl-0 md:pl-[100px]">
-          
-          <!-- Smaller SVG Logo Header with extra distance below -->
-          <div class="flex items-center gap-3 mb-6 md:mb-10">
-            <img src="/one liner logo.svg" alt="Klear Kollective Logo" class="h-6 md:h-8 w-auto object-contain" />
-          </div>
-
-          <!-- Headline -->
-          <h1 class="text-3xl md:text-6xl font-semibold leading-tight tracking-tight drop-shadow-sm">
-            Running your business <br> is already enough work.
-          </h1>
-
-          <!-- Subtitle -->
-          <p class="text-xl md:text-4xl text-[#efe7d3] font-normal mb-6 md:mb-10">
-            Let us help you create content <br> that keeps your business looking its best.
-          </p>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap gap-8 pt-3">
-            <a href="#portfolio" class="bg-[#1a0089] hover:bg-[#140262] text-[#efe7d3] px-6 py-1.5 rounded-full text-base md:text-[24px] font-medium transition-all shadow-md">
-              Our Portfolio
-            </a>
-            <a href="#contact" class="bg-[#b7cf4f] hover:bg-[#7c921e] text-[#1a0089] px-6 py-1.5 rounded-full text-base md:text-[24px] font-medium transition-all shadow-md">
-              Contact Us
-            </a>
-          </div>
-
-        </div>
-
+      <!-- Logo Header -->
+      <div class="flex items-center gap-3 mb-5 md:mb-10">
+        <img src="/one liner logo.svg" alt="Klear Kollective Logo" class="h-3 md:h-8 w-auto object-contain" />
       </div>
 
-    </section>
+      <!-- Headline -->
+      <h1 class="text-[24px] sm:text-2xl md:text-6xl font-semibold leading-tight tracking-tight drop-shadow-sm mb-3 md:mb-0">
+        Running your business <br> is already enough work.
+      </h1>
 
-    <!-- SECTION: HOW IT WORKS -->
-    <section class="max-w-5xl mx-auto py-[50px] text-left">
-      <h2 class="text-3xl md:text-5xl font-extrabold italic mb-12 text-[#1C0D66]">
-        Working together is simple
-      </h2>
-
-      <!-- Grid with larger gutter (gap-12) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-15 text-left">
-        
-        <!-- Step 1 -->
-        <div class="flex flex-col items-center text-center gap-4">
-          <div class="w-[300px] h-[350px] rounded-3xl overflow-hidden">
-            <img 
-              src="/step1.png" 
-              class="w-full h-full object-cover" 
-            />
-          </div>
-          <h3 class="text-3xl font-bold text-[#1C0D66]">Say Hello!</h3>
-          <p class="text-xl text-gray-700">We want to know more <br> about your needs</p>
-        </div>
-
-        <!-- Step 2 (Chat UI Box) -->
-        <div class="flex flex-col items-center text-center gap-4">
-          <div class="w-[300px] h-[350px] rounded-3xl p-6 flex flex-col justify-center items-center gap-3">
-            <img 
-              src="/step2.png" 
-              alt="Let's Discuss!"
-              class="w-full h-full object-cover" 
-            />
-          </div>
-          <h3 class="text-3xl font-bold text-[#1C0D66]">Let's Discuss</h3>
-          <p class="text-xl text-gray-700">
-            We'll recommend what <br> <span class="font-bold">fits your needs and budget</span>
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="flex flex-col items-center text-center gap-4">
-          <div class="w-[300px] h-[350px] rounded-3xl overflow-hidden">
-            <img 
-              src="/step3.png" 
-              alt="We Create" 
-              class="w-full h-full object-cover" 
-            />
-          </div>
-          <h3 class="text-3xl font-bold text-[#1C0D66]">We Create</h3>
-          <p class="text-xl text-gray-700">We handle the filming, <br> editing, and delivery</p>
-        </div>
-
-      </div>
-    </section>
-
-  <!-- SECTION: PACKAGES / PRICING (With Custom Full-Width Background) -->
-  <section id="pricing" class="w-full bg-white py-[50px]">
-    <div class="max-w-6xl mx-auto px-18">
-      
-      <!-- Section Heading -->
-      <h2 class="text-3xl md:text-5xl font-bold italic mb-8 text-[#1a0089]">
-        Here’s how we can help
-      </h2>
-
-      <!-- 7-Column Grid Layout for Asymmetric Column Widths (2 : 2 : 3 ratio) -->
-      <div class="grid grid-cols-1 md:grid-cols-7 gap-6 items-stretch">
-        
-        <!-- LEFT AREA: Spans 4 columns -->
-        <div class="md:col-span-4 flex flex-col h-full gap-3">
-          
-          <!-- Shared Header -->
-          <p class="text-base font-semibold text-gray-700">
-            Need help creating content?
-          </p>
-
-          <!-- Inner 2-Card Grid (Stretches to fill remaining height) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 h-full">
-            
-            <!-- Column 1: Klear Create -->
-            <div class="flex flex-col border border-gray-300 rounded-xl overflow-hidden bg-white shadow-sm h-full justify-between">
-              <div class="h-44 w-full p-3 bg-gray-50">
-                <img src="/package1.png" alt="Klear Create" class="w-full h-full object-cover rounded-md" />
-              </div>
-              <div class="p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 class="text-2xl font-bold italic text-[#1a0089] mb-3 flex items-center gap-2">
-                    🎥 Klear Create
-                  </h3>
-                  <ul class="text-base text-gray-700 space-y-1 list-disc list-inside">
-                    <li><span class="font-bold">1 hour</span> on-location shoot*</li>
-                    <li><span class="font-bold">2 short video</span> (up to 1 min)</li>
-                    <li><span class="font-bold">1x revision</span> each</li>
-                    <li><span class="font-bold">5-7 working days</span></li>
-                  </ul>
-                </div>
-                <div class="mt-6 pt-4 border-t border-gray-100 text-center text-2xl font-bold text-[#1a0089]">
-                  $150
-                </div>
-              </div>
-            </div>
-
-            <!-- Column 2: Klear Capture -->
-            <div class="flex flex-col border border-gray-300 rounded-xl overflow-hidden bg-white shadow-sm h-full justify-between">
-              <div class="h-44 w-full p-3 bg-gray-50">
-                <img src="/package2.png" alt="Klear Capture" class="w-full h-full object-cover rounded-md" />
-              </div>
-              <div class="p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 class="text-2xl font-bold italic text-[#1a0089] mb-3 flex items-center gap-2">
-                    🎉 Klear Capture
-                  </h3>
-                  <ul class="text-base text-gray-700 space-y-1 list-disc list-inside">
-                    <li><span class="font-bold">2 hour</span> on-location shoot*</li>
-                    <li><span class="font-bold">5 short video</span> (up to 1 min)</li>
-                    <li><span class="font-bold">1x revision</span> each</li>
-                    <li><span class="font-bold">7-9 working days</span></li>
-                  </ul>
-                </div>
-                <div class="mt-6 pt-4 border-t border-gray-100 text-center text-2xl font-bold text-[#1a0089]">
-                  $250
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- RIGHT AREA: Column 3: Klear Partner (Spans 3 columns) -->
-        <div class="md:col-span-3 flex flex-col h-full gap-3">
-          <!-- Column Label -->
-          <p class="text-base font-semibold text-gray-700">
-            Looking for ongoing creative support?
-          </p>
-          <!-- Card Container wrapped in flex-1 h-full so it grows perfectly -->
-          <div class="flex-1 h-full">
-            <div class="flex flex-col border border-[#b7cf4f] rounded-xl overflow-hidden bg-[#eef5cd] shadow-sm h-full justify-between">
-              <div class="h-44 w-full p-3">
-                <img src="/package3.png" alt="Klear Partner" class="w-full h-full object-cover rounded-md" />
-              </div>
-              <div class="p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 class="text-2xl font-bold italic text-[#1a0089] mb-3 flex items-center gap-2">
-                    🤝 Klear Partner
-                  </h3>
-                  <ul class="text-base text-gray-800 space-y-1 list-disc list-inside">
-                    <li><span class="font-bold">Minimum 3 months</span> commitment</li>
-                    <li><span class="font-bold">30 mins</span> online consultation per month</li>
-                    <li><span class="font-bold">2x 2 hours shoot*</span></li>
-                    <li><span class="font-bold">1 carousel & 1 reels/week</span> (4wk/mo)</li>
-                    <li><span class="font-bold">1x revisions</span> per deliverables</li>
-                  </ul>
-                </div>
-                <div class="mt-6 pt-4 border-t border-[#d8e894] text-center text-2xl font-bold text-[#1a0089]">
-                  $450/month
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Footer Disclaimer Note -->
-      <p class="text-base text-gray-600 mt-6 text-center md:text-left">
-        *Content is filmed on iPhone 15 Pro Max. Professional camera available upon request.
+      <!-- Subtitle -->
+      <p class="text-[16px] sm:text-sm md:text-4xl text-[#efe7d3] font-normal mb-6 md:mb-10">
+        Let us help you create content <br> that keeps your business looking its best.
       </p>
 
-    </div>
-  </section>
+      <!-- Action Buttons -->
+      <!-- Overlaps the bottom edge of the card/hero image -->
+      <div class="flex flex-wrap gap-2.5 md:gap-8 absolute md:relative -bottom-4 md:bottom-auto left-4 md:left-auto z-20">
+        <a href="#portfolio" class="bg-[#10005e] md:bg-[#1a0089] hover:bg-[#140262] text-[#efe7d3] px-5 py-1.5 md:py-1.5 rounded-full text-[18px] md:text-[24px] font-medium transition-all shadow-lg border border-indigo-400/20 md:border-none">
+          portfolio
+        </a>
+        <a href="#contact" class="bg-[#b7cf4f] hover:bg-[#7c921e] text-[#1a0089] px-5 py-1.5 md:py-1.5 rounded-full text-[18px] md:text-[24px] font-medium transition-all shadow-lg">
+          contact us
+        </a>
+      </div>
 
-  <!-- SECTION: CONTACT US -->
-    <section id="contact" class="w-full bg-[#EFE7D3] overflow-hidden">
-      <!-- Full-width grid container (removed max-w margins on the left side) -->
-      <div class="w-full grid grid-cols-1 md:grid-cols-12 min-h-[600px] items-stretch">
+    </div>
+
+  </div>
+
+</section>
+
+ <!-- SECTION: HOW IT WORKS -->
+<section class="max-w-5xl mx-auto py-8 md:py-[50px] text-left px-4 md:px-0 pt-16 md:pt-[50px] px-10 md:px-0">
+  <h2 class="text-3xl md:text-5xl font-extrabold italic mb-8 md:mb-12 text-[#1C0D66] text-center md:text-left">
+    Working together <br class="block md:hidden"/> is simple
+  </h2>
+
+  <!-- Grid Layout -->
+  <div class="flex flex-col md:grid md:grid-cols-3 gap-6 md:gap-15">
+    
+    <!-- Step 1 -->
+    <div class="flex flex-row md:flex-col items-center md:items-center text-left md:text-center gap-4">
+      <div class="w-[120px] h-[140px] sm:w-[150px] sm:h-[175px] md:w-[300px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden flex-shrink-0">
+        <img 
+          src="/step1.png" 
+          alt="Say Hello!"
+          class="w-full h-full object-cover" 
+        />
+      </div>
+      <div>
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#1C0D66] mb-1 md:mb-0">Say Hello!</h3>
+        <p class="text-[14px] sm:text-base md:text-xl text-gray-700">We want to know more <br> about your needs</p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex flex-row md:flex-col items-center md:items-center text-left md:text-center gap-4">
+      <div class="w-[120px] h-[140px] sm:w-[150px] sm:h-[175px] md:w-[300px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden flex-shrink-0">
+        <img 
+          src="/step2.png" 
+          alt="Let's Discuss!"
+          class="w-full h-full object-cover" 
+        />
+      </div>
+      <div>
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#1C0D66] mb-1 md:mb-0">Let's Discuss</h3>
+        <p class="text-[14px] sm:text-base md:text-xl text-gray-700">
+          We'll recommend what <br> <span class="font-bold">fits your needs and budget</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex flex-row md:flex-col items-center md:items-center text-left md:text-center gap-4">
+      <div class="w-[120px] h-[140px] sm:w-[150px] sm:h-[175px] md:w-[300px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden flex-shrink-0">
+        <img 
+          src="/step3.png" 
+          alt="We Create" 
+          class="w-full h-full object-cover" 
+        />
+      </div>
+      <div>
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#1C0D66] mb-1 md:mb-0">We Create</h3>
+        <p class="text-[14px] sm:text-base md:text-xl text-gray-700">We handle the filming, <br> editing, and delivery</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- SECTION: PACKAGES / PRICING -->
+<section id="pricing" class="w-full bg-white py-8 md:py-[50px]">
+  <div class="max-w-6xl mx-auto px-6 md:px-18">
+    
+    <!-- Section Heading -->
+    <h2 class="text-3xl md:text-5xl font-extrabold italic mb-6 md:mb-8 text-[#1a0089] text-center md:text-left">
+      Here’s how <br class="block md:hidden"/> we can help
+    </h2>
+
+    <!-- 7-Column Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-7 gap-6 items-stretch">
+      
+      <!-- LEFT AREA: Spans 4 columns on desktop -->
+      <div class="md:col-span-4 flex flex-col h-full gap-3">
         
-        <!-- Left Side: Vertical Photo (Sticks to top, left, and bottom edges) -->
-        <div class="md:col-span-4 relative min-h-[400px] md:min-h-full">
+        <!-- Shared Header -->
+        <p class="text-base font-semibold text-gray-800">
+          Need help creating content?
+        </p>
+
+        <!-- 2-Card Grid: Stacked on mobile (1 col), side-by-side on desktop (2 cols) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 flex-1 h-full">
+          
+          <!-- Column 1: Klear Create -->
+          <div class="flex flex-row md:flex-col border border-gray-300 rounded-xl overflow-hidden bg-white shadow-sm h-full items-stretch justify-between">
+            
+            <!-- Left Side Image on Mobile / Top Image on Desktop -->
+            <div class="w-1/3 md:w-full md:h-44 p-2 md:p-3 bg-gray-50 flex-shrink-0 self-stretch">
+              <img src="/package1.png" alt="Klear Create" class="w-full h-full object-cover rounded-md" />
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-3 md:p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl md:text-2xl font-bold italic text-[#1a0089] mb-2 flex items-start gap-2">
+                  <span class="flex flex-col leading-tight">
+                    🎥 Klear Create
+                  </span>
+                </h3>
+                <ul class="text-sm md:text-base text-gray-700 space-y-1 list-disc list-outside pl-4">
+                  <li>
+                    <span class="font-bold">1 hour</span> on-location shoot*
+                  </li>
+                  <li>
+                    <span class="font-bold">2 short-form video</span> <span class="text-xs md:text-sm text-gray-600">(up to 1 min)</span>
+                  </li>
+                  <li>
+                    <span class="font-bold">1x revision</span> each
+                  </li>
+                  <li>
+                    <span class="font-bold">5-7 working days</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Price for Mobile -->
+              <div class="mt-3 md:hidden font-bold text-xl text-[#1a0089]">
+                $150
+              </div>
+            </div>
+
+            <!-- Price Footer for Desktop -->
+            <div class="hidden md:block p-3 bg-white border-t border-gray-200 text-center text-2xl font-bold text-[#1a0089]">
+              $150
+            </div>
+          </div>
+
+          <!-- Column 2: Klear Capture -->
+          <div class="flex flex-row md:flex-col border border-gray-300 rounded-xl overflow-hidden bg-white shadow-sm h-full items-stretch justify-between">
+            
+            <!-- Left Side Image on Mobile / Top Image on Desktop -->
+            <div class="w-1/3 md:w-full md:h-44 p-2 md:p-3 bg-gray-50 flex-shrink-0 self-stretch">
+              <img src="/package2.png" alt="Klear Capture" class="w-full h-full object-cover rounded-md" />
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-3 md:p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl md:text-2xl font-bold italic text-[#1a0089] mb-2 flex items-start gap-2">
+                  <span class="flex flex-col leading-tight">
+                    🎉 Klear Capture
+                  </span>
+                </h3>
+                <ul class="text-sm md:text-base text-gray-700 space-y-1 list-disc list-outside pl-4">
+                  <li>
+                    <span class="font-bold">2 hour</span> on-location shoot*
+                  </li>
+                  <li>
+                    <span class="font-bold">5 short-form video</span> <span class="text-xs md:text-sm text-gray-600">(up to 1 min)</span>
+                  </li>
+                  <li>
+                    <span class="font-bold">1x revision</span> each
+                  </li>
+                  <li>
+                    <span class="font-bold">7-9 working days</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Price for Mobile -->
+              <div class="mt-3 md:hidden font-bold text-xl text-[#1a0089]">
+                $250
+              </div>
+            </div>
+
+            <!-- Price Footer for Desktop -->
+            <div class="hidden md:block p-3 bg-white border-t border-gray-200 text-center text-2xl font-bold text-[#1a0089]">
+              $250
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT AREA: Klear Partner (Spans 3 columns on desktop) -->
+      <div class="md:col-span-3 flex flex-col h-full gap-3 mt-4 md:mt-0">
+        <!-- Column Label -->
+        <p class="text-base font-semibold text-gray-800">
+          Looking for ongoing creative support?
+        </p>
+        
+        <div class="flex-1 h-full">
+          <div class="flex flex-col border border-[#b7cf4f] rounded-xl overflow-hidden bg-[#eef5cd] shadow-sm h-full justify-between">
+            <div class="h-40 sm:h-48 md:h-44 w-full p-2 md:p-3">
+              <img src="/package3.png" alt="Klear Partner" class="w-full h-full object-cover rounded-md" />
+            </div>
+            <div class="p-4 md:p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl md:text-2xl font-bold italic text-[#1a0089] mb-3 flex items-center gap-2">
+                  🤝 Klear Partner
+                </h3>
+                <ul class="text-sm md:text-base text-gray-800 space-y-1.5 list-disc list-outside pl-4">
+                  <li><span class="font-bold">Minimum 3 months</span> commitment</li>
+                  <li><span class="font-bold">30 mins</span> online consultation per month</li>
+                  <li><span class="font-bold">2x 2 hours shoot*</span></li>
+                  <li><span class="font-bold">1 carousel & 1 reels/week</span> (4wk/mo)</li>
+                  <li><span class="font-bold">1x revisions</span> per deliverables</li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-3 bg-[#e4eeb5] md:bg-transparent border-t border-[#d8e894] text-center text-xl md:text-2xl font-bold text-[#1a0089]">
+              $450/month
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Disclaimer Note -->
+    <p class="text-xs md:text-base text-gray-600 mt-6 text-left">
+      *Content is filmed on iPhone 15 Pro Max. Professional camera available upon request.
+    </p>
+
+  </div>
+</section>
+
+ <!-- SECTION: CONTACT US -->
+<section id="contact" class="w-full bg-[#EFE7D3] overflow-hidden relative">
+  
+  <!-- DESKTOP BACKGROUND PHOTO: Bleeds from far left edge to 33% screen width -->
+  <div class="hidden md:block absolute inset-y-0 left-0 w-[33vw] z-0">
+    <img 
+      src="/contact-bg.png" 
+      alt="Gardens by the Bay Singapore" 
+      class="w-full h-full object-cover" 
+    />
+  </div>
+
+  <!-- INNER CONTENT CONTAINER -->
+  <div class="max-w-6xl mx-auto px-10 md:px-18 relative z-10 py-0 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Left Side: Heading & Mobile Image -->
+      <div class="md:col-span-4 flex flex-col justify-start relative min-h-[300px] md:min-h-full -mx-4 md:mx-0 -mt-0 md:mt-0">
+        
+        <!-- Mobile Full-Bleed Photo (Stretches past the parent px-4 padding to hit mobile screen edges) -->
+        <div class="md:hidden absolute inset-0 z-0">
           <img 
             src="/contact-bg.png" 
             alt="Gardens by the Bay Singapore" 
-            class="absolute inset-0 w-full h-full object-cover" 
+            class="w-full h-full object-cover" 
           />
-        <h2 class="relative z-10 p-6 md:p-8 text-5xl md:text-6xl font-black italic text-black tracking-tight">
-          Contact Us
+        </div>
+
+        <h2 class="relative z-10 p-6 md:p-0 text-4xl md:text-6xl font-black italic text-black tracking-tight">
+          Contact <br> Us
         </h2>
       </div>
 
       <!-- Right Side: Form & WhatsApp CTA -->
-      <div class="md:col-span-8 p-8 md:p-12 flex flex-col justify-between gap-6">
+      <div class="md:col-span-8 flex flex-col justify-between gap-6 py-6 md:py-0">
         <form class="flex flex-col gap-6 w-full text-[#1a0089]">
           
           <!-- Name Field -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-4">
-            <label class="text-xl md:text-2xl font-normal text-black md:col-span-3">Name</label>
+          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-2 md:gap-4">
+            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3">Name</label>
             <input 
               type="text" 
               placeholder="Your name goes here" 
-              class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
+              class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-base md:text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
             />
           </div>
 
           <!-- Email Field -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-4">
-            <label class="text-xl md:text-2xl font-normal text-black md:col-span-3">Email</label>
+          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-2 md:gap-4">
+            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3">Email</label>
             <input 
               type="email" 
               placeholder="email@gmail.com" 
-              class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
+              class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-base md:text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
             />
           </div>
 
           <!-- Package Selection -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-4">
-            <label class="text-xl md:text-2xl font-normal text-black md:col-span-3">Package</label>
+          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-2 md:gap-4">
+            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3">Package</label>
             
-            <!-- Wrapper to hold the select input & custom arrow -->
             <div class="relative md:col-span-9 w-full">
               <select 
                 required
                 defaultValue=""
-                class="w-full px-6 py-3 pr-12 rounded-full border border-[#404040] bg-transparent text-lg text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#1a0089] cursor-pointer appearance-none invalid:text-[#404040]/60"
+                class="w-full px-6 py-3 pr-12 rounded-full border border-[#404040] bg-transparent text-base md:text-lg text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#1a0089] cursor-pointer appearance-none invalid:text-[#404040]/60"
               >
-                <!-- Placeholder option (disabled so they have to pick a real package) -->
                 <option value="" disabled selected hidden class="text-[#404040]/60">
                   Select a package 
                 </option>
@@ -293,7 +359,6 @@ const title = "Klear Kollective | Content Creation & Production";
                 <option value="klear-partner" class="text-[#404040]">🤝 Klear Partner</option>
               </select>
 
-              <!-- Custom Dropdown Arrow Icon -->
               <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-[#404040]">
                 <svg class="h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
@@ -303,23 +368,24 @@ const title = "Klear Kollective | Content Creation & Production";
           </div>
 
           <!-- Message Box -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-start gap-4">
-            <label class="text-xl md:text-2xl font-normal text-black md:col-span-3 pt-2">Message</label>
+          <div class="grid grid-cols-1 md:grid-cols-12 items-start gap-2 md:gap-4">
+            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3 pt-2">Message</label>
             <textarea 
-              rows="6" 
-              class="md:col-span-9 p-6 rounded-3xl border border-gray-600 bg-transparent text-lg text-black focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
+              rows="5" 
+              class="md:col-span-9 p-6 rounded-3xl border border-gray-600 bg-transparent text-base md:text-lg text-black focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
             ></textarea>
           </div>
 
         </form>
 
         <!-- WhatsApp Alternative Line -->
-        <div class="flex items-center justify-end gap-4 text-xl font-normal text-black mt-4">
+        <div class="flex flex-col md:flex-row mb-10 md:mb-0 items-center justify-end gap-2 md:gap-4 text-base md:text-xl font-normal text-black mt-4 text-right">
           <span>...or you can just</span>
+        
           <a 
             href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I'd%20like%20to%20engage%20your%20service,%20but%20first%0AMy%20business%20is...%20%0AI%20need%20you%20for%20_(insert%20package,%20or%20describe%20how%20I%20can%20help%20you)_" 
             target="_blank"
-            class="bg-[#b7cf4f] hover:bg-[#a2ba3c] text-black px-6 py-3 rounded-full font-medium transition-all shadow-sm"
+            class="bg-[#b7cf4f] hover:bg-[#a2ba3c] text-black px-6 py-3 rounded-full font-medium transition-all shadow-sm text-center"
           >
             chat us on WhatsApp
           </a>
@@ -328,58 +394,56 @@ const title = "Klear Kollective | Content Creation & Production";
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- FOOTER -->
-  <footer class="w-full bg-[#1a0089] text-[#efe7d3] py-16 px-6">
-    <!-- Max width tightened slightly to 5xl, and grid adjusted to 4 columns (2 : 1 : 1 ratio) -->
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+  <footer class="w-full bg-[#1a0089] text-[#efe7d3] py-8 md:py-16 px-6">
+    <!-- 2-Column Grid Layout on Desktop -->
+    <div class="max-w-5xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-start">
       
-      <!-- Left Area: Branding (Spans 2 Columns to prevent huge gaps) -->
-      <div class="md:col-span-2 flex flex-col gap-4 pr-6">
-        <img src="/one liner logo.svg" alt="Klear Kollective" class="h-6 w-auto object-contain self-start -ml-1" />
-        <p class="text-[21px] text-[#b7cf4f]/90 max-w-sm leading-relaxed">
+      <!-- Left Area: Branding -->
+      <div class="flex flex-col gap-3 md:gap-4 pr-0 md:pr-6">
+        <img src="/one liner logo.svg" alt="Klear Kollective" class="h-5 md:h-6 w-auto object-contain self-start -ml-1" />
+        <p class="text-base md:text-[21px] text-[#b7cf4f]/90 max-w-sm leading-relaxed">
           Creative helping hands <br> to grow your brand <br> <br> Based in Singapore 🇸🇬
         </p>
       </div>
-
-      <!-- Column 2: Quick Links -->
-      <div class="flex flex-col gap-4">
-        <h4 class="text-[24px] font-bold italic tracking-wide text-white">QUICK LINKS</h4>
-        <ul class="flex flex-col gap-2.5">
+  
+      <!-- Right Area: Get In Touch (Aligned cleanly to the right side on desktop) -->
+      <div class="flex flex-col gap-3 md:gap-4 md:items-end text-left md:text-right">
+        <h4 class="text-base md:text-[24px] font-bold italic tracking-wide text-white">GET IN TOUCH</h4>
+        <ul class="flex flex-col gap-2 md:gap-2.5">
           <li>
-            <a href="#about" class="text-[24px] hover:underline text-[#efe7d3]/90 transition-all">About Us</a>
-          </li>
-          <li>
-            <a href="#pricing" class="text-[24px] hover:underline text-[#efe7d3]/90 transition-all">Pricing</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Get In Touch -->
-      <div class="flex flex-col gap-4">
-        <h4 class="text-[24px] font-bold italic tracking-wide text-white">GET IN TOUCH</h4>
-        <ul class="flex flex-col gap-2.5">
-          <li>
-            <a href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I'd%20like%20to%20engage%20your%20service,%20but%20first%0AMy%20business%20is...%20%0AI%20need%20you%20for%20_(insert%20package,%20or%20describe%20how%20I%20can%20help%20you)_" 
-            class="text-[24px] hover:underline flex items-center gap-2 text-[#efe7d3]/90 transition-all">
+            <a 
+              href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I'd%20like%20to%20engage%20your%20service,%20but%20first%0AMy%20business%20is...%20%0AI%20need%20you%20for%20_(insert%20package,%20or%20describe%20how%20I%20can%20help%20you)_" 
+              target="_blank"
+              class="text-sm md:text-[24px] hover:underline flex items-center md:justify-end gap-2 text-[#efe7d3]/90 transition-all"
+            >
               💬 WhatsApp
             </a>
           </li>
           <li>
-            <a href="mailto:admin@klear.sg" class="text-[24px] hover:underline flex items-center gap-2 text-[#efe7d3]/90 transition-all">
+            <a 
+              href="mailto:admin@klear.sg" 
+              class="text-sm md:text-[24px] hover:underline flex items-center md:justify-end gap-2 text-[#efe7d3]/90 transition-all"
+            >
               ✉️ Email
             </a>
           </li>
           <li>
-            <a href="https://instagram.com/klear.kollective" class="text-[24px] hover:underline flex items-center gap-2 text-[#efe7d3]/90 transition-all">
+            <a 
+              href="https://instagram.com/klear.kollective" 
+              target="_blank"
+              class="text-sm md:text-[24px] hover:underline flex items-center md:justify-end gap-2 text-[#efe7d3]/90 transition-all"
+            >
               📷 Instagram
             </a>
           </li>
         </ul>
       </div>
-
+  
     </div>
   </footer>
   
