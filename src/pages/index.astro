@@ -51,12 +51,22 @@ const title = "Klear Kollective | Content Creation & Production";
       </p>
 
       <!-- Action Buttons -->
-      <!-- Overlaps the bottom edge of the card/hero image -->
       <div class="flex flex-wrap gap-2.5 md:gap-8 absolute md:relative -bottom-4 md:bottom-auto left-4 md:left-auto z-20">
-        <a href="#portfolio" class="bg-[#10005e] md:bg-[#1a0089] hover:bg-[#140262] text-[#efe7d3] px-5 py-1.5 md:py-1.5 rounded-full text-[18px] md:text-[24px] font-medium transition-all shadow-lg border border-indigo-400/20 md:border-none">
+        <!-- Portfolio Button (Opens Instagram in a new tab) -->
+        <a 
+          href="https://instagram.com/klear.kollective" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="bg-[#10005e] md:bg-[#1a0089] hover:bg-[#140262] text-[#efe7d3] px-5 py-1.5 md:py-1.5 rounded-full text-[18px] md:text-[24px] font-medium transition-all shadow-lg border border-indigo-400/20 md:border-none"
+        >
           portfolio
         </a>
-        <a href="#contact" class="bg-[#b7cf4f] hover:bg-[#7c921e] text-[#1a0089] px-5 py-1.5 md:py-1.5 rounded-full text-[18px] md:text-[24px] font-medium transition-all shadow-lg">
+
+        <!-- Contact Us Button (Scrolls to #contact section) -->
+        <a 
+          href="#contact" 
+          class="bg-[#b7cf4f] hover:bg-[#7c921e] text-[#1a0089] px-5 py-1.5 md:py-1.5 rounded-full text-[18px] md:text-[24px] font-medium transition-all shadow-lg"
+        >
           contact us
         </a>
       </div>
@@ -284,7 +294,7 @@ const title = "Klear Kollective | Content Creation & Production";
   </div>
 </section>
 
- <!-- SECTION: CONTACT US -->
+<!-- SECTION: CONTACT US -->
 <section id="contact" class="w-full bg-[#EFE7D3] overflow-hidden relative">
   
   <!-- DESKTOP BACKGROUND PHOTO: Bleeds from far left edge to 33% screen width -->
@@ -301,10 +311,10 @@ const title = "Klear Kollective | Content Creation & Production";
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
       
       <!-- Left Side: Heading & Mobile Image -->
-      <div class="md:col-span-4 flex flex-col justify-start relative min-h-[300px] md:min-h-full -mx-4 md:mx-0 -mt-0 md:mt-0">
+      <div class="md:col-span-4 flex flex-col justify-start relative min-h-[300px] md:min-h-full -mx-10 md:mx-0 -mt-0 md:mt-0">
         
-        <!-- Mobile Full-Bleed Photo (Stretches past the parent px-4 padding to hit mobile screen edges) -->
-        <div class="md:hidden absolute inset-0 z-0">
+        <!-- Mobile Full-Bleed Photo -->
+        <div class="md:hidden absolute inset-0 z-0 w-[calc(100%+5rem)] -ml-0">
           <img 
             src="/contact-bg.png" 
             alt="Gardens by the Bay Singapore" 
@@ -317,39 +327,42 @@ const title = "Klear Kollective | Content Creation & Production";
         </h2>
       </div>
 
-      <!-- Right Side: Form & WhatsApp CTA -->
-      <div class="md:col-span-8 flex flex-col justify-between gap-6 py-6 md:py-0">
+      <!-- Right Side: Form & Actions -->
+      <div class="md:col-span-8 flex flex-col justify-between py-6 md:py-0">
         <form class="flex flex-col gap-6 w-full text-[#1a0089]">
           
-          <!-- Name Field -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-2 md:gap-4">
-            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3">Name</label>
-            <input 
-              type="text" 
-              placeholder="Your name goes here" 
-              class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-base md:text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
-            />
-          </div>
+          <!-- Name & Email Side by Side on Desktop -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Name Field -->
+            <div class="flex flex-col gap-2">
+              <label class="text-xl md:text-2xl font-normal text-black">Name</label>
+              <input 
+                type="text" 
+                placeholder="Your name goes here" 
+                class="w-full px-6 py-3.5 rounded-full border border-gray-600 bg-transparent text-base md:text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
+              />
+            </div>
 
-          <!-- Email Field -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-2 md:gap-4">
-            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3">Email</label>
-            <input 
-              type="email" 
-              placeholder="email@gmail.com" 
-              class="md:col-span-9 px-6 py-3 rounded-full border border-gray-600 bg-transparent text-base md:text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
-            />
+            <!-- Email Field -->
+            <div class="flex flex-col gap-2">
+              <label class="text-xl md:text-2xl font-normal text-black">Email</label>
+              <input 
+                type="email" 
+                placeholder="email@gmail.com" 
+                class="w-full px-6 py-3.5 rounded-full border border-gray-600 bg-transparent text-base md:text-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
+              />
+            </div>
           </div>
 
           <!-- Package Selection -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-2 md:gap-4">
-            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3">Package</label>
+          <div class="flex flex-col gap-2">
+            <label class="text-xl md:text-2xl font-normal text-black">Package</label>
             
-            <div class="relative md:col-span-9 w-full">
+            <div class="relative w-full">
               <select 
                 required
                 defaultValue=""
-                class="w-full px-6 py-3 pr-12 rounded-full border border-[#404040] bg-transparent text-base md:text-lg text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#1a0089] cursor-pointer appearance-none invalid:text-[#404040]/60"
+                class="w-full px-6 py-3.5 pr-12 rounded-full border border-[#404040] bg-transparent text-base md:text-lg text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#1a0089] cursor-pointer appearance-none invalid:text-[#404040]/60"
               >
                 <option value="" disabled selected hidden class="text-[#404040]/60">
                   Select a package 
@@ -368,28 +381,37 @@ const title = "Klear Kollective | Content Creation & Production";
           </div>
 
           <!-- Message Box -->
-          <div class="grid grid-cols-1 md:grid-cols-12 items-start gap-2 md:gap-4">
-            <label class="text-lg md:text-2xl font-normal text-black md:col-span-3 pt-2">Message</label>
+          <div class="flex flex-col gap-2">
+            <label class="text-xl md:text-2xl font-normal text-black">Message</label>
             <textarea 
               rows="5" 
-              class="md:col-span-9 p-6 rounded-3xl border border-gray-600 bg-transparent text-base md:text-lg text-black focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
+              class="w-full p-6 rounded-3xl border border-gray-600 bg-transparent text-base md:text-lg text-black focus:outline-none focus:ring-2 focus:ring-[#1a0089]"
             ></textarea>
           </div>
 
-        </form>
+          <!-- Full Width Stacked Buttons Container -->
+          <div class="flex flex-col gap-4 mt-2 w-full">
+            
+            <!-- Submit Form Button (Full Box Width) -->
+            <button 
+              type="submit" 
+              class="w-full bg-[#10005e] hover:bg-[#1a0089] text-white py-4 rounded-full font-bold transition-all shadow-md text-center cursor-pointer text-lg md:text-xl"
+            >
+              Submit Form
+            </button>
 
-        <!-- WhatsApp Alternative Line -->
-        <div class="flex flex-col md:flex-row mb-10 md:mb-0 items-center justify-end gap-2 md:gap-4 text-base md:text-xl font-normal text-black mt-4 text-right">
-          <span>...or you can just</span>
-        
-          <a 
-            href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I'd%20like%20to%20engage%20your%20service,%20but%20first%0AMy%20business%20is...%20%0AI%20need%20you%20for%20_(insert%20package,%20or%20describe%20how%20I%20can%20help%20you)_" 
-            target="_blank"
-            class="bg-[#b7cf4f] hover:bg-[#a2ba3c] text-black px-6 py-3 rounded-full font-medium transition-all shadow-sm text-center"
-          >
-            chat us on WhatsApp
-          </a>
-        </div>
+            <!-- WhatsApp Button (Full Box Width Below Submit) -->
+            <a 
+              href="https://api.whatsapp.com/send?phone=6583168715&text=Hi%20Klear!%20I'd%20like%20to%20engage%20your%20service,%20but%20first%0AMy%20business%20is...%20%0AI%20need%20you%20for%20_(insert%20package,%20or%20describe%20how%20I%20can%20help%20you)_" 
+              target="_blank"
+              class="w-full bg-[#b7cf4f] hover:bg-[#a2ba3c] text-black py-4 rounded-full font-medium transition-all shadow-sm text-center text-base md:text-xl mb-6"
+            >
+              ...or you can just chat us on WhatsApp
+            </a>
+
+          </div>
+
+        </form>
 
       </div>
 
